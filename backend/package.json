@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm run server\"  \"npm run client\"",
     "data:destroy": "node seeder -d",
     "data:import": "node seeder ",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --postfix ../frontend && npm run build --postfix /frontend"
+    "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "author": "Deepak",
   "license": "ISC",
